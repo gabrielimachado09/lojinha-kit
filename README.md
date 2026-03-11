@@ -1,1 +1,1 @@
-# lojinha-kit
+# loja

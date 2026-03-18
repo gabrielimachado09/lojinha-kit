@@ -8,19 +8,19 @@ body{
               grid-template-columns: 400px auto;
 }
 header {
-       background-color:#0A4174;
+       background-color:#6C0820;
        grid-area: cabeca;
 }
 aside{
-       background-color:#49769F;
+       background-color: #5A86CB;
        grid-area: braco;
 }
 main{
-       background-color: #4E8EA2;
+       background-color:#F2AEBC ;
        grid-area: corpo;
 }
 footer{
-    background-color:#001D39;
+    background-color:#3D5D91;
     grid-area: peh;
 }
 
@@ -69,12 +69,20 @@ footer{
    flex-direction: column;
    justify-content: space-between;
    padding: 50px;
-   border: black 2px solid;
-   background-color:#BDD8E9;
+   border: WHITE 2px solid;
+   background-color: #F2DCDB;
    width: 200px;
    height: 350px;
    border-radius: 10px;
    text-align: center;
    margin: 10px;
 }
-  
+button{
+    background-color: #F2AEBC;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+      

@@ -55,9 +55,10 @@ footer{
         display: none;
     }
 }
-.img_pedute{
-   width: 200px;
+.img_pedute {
    height: 200px;
+   width: 200px;
+
 }
 .papi{
     display: flex;
@@ -76,6 +77,7 @@ footer{
    border-radius: 10px;
    text-align: center;
    margin: 10px;
+
 }
 button{
     background-color: #F2AEBC;
@@ -85,4 +87,10 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+ .kitty{
+    text-decoration: none;
+    color: inherit;
+    display: content;
+ }
       

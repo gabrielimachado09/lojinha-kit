@@ -1,0 +1,96 @@
+body{
+       display: grid;
+       grid-template-areas:
+              "cabeca cabeca"
+              "braco corpo"
+              "peh peh";
+              grid-template-rows: 100px auto 100px;
+              grid-template-columns: 400px auto;
+}
+header {
+       background-color:#6C0820;
+       grid-area: cabeca;
+}
+aside{
+       background-color: #5A86CB;
+       grid-area: braco;
+}
+main{
+       background-color:#F2AEBC ;
+       grid-area: corpo;
+}
+footer{
+    background-color:#3D5D91;
+    grid-area: peh;
+}
+
+@media only screen and (max-width: 850px){
+    body{
+        display: grid;
+        grid-template-areas:
+        "cabeca"
+        "braco"
+        "corpo"
+        "peh";
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-columns: auto;
+    }
+    .letra{
+        color: coral;
+        
+    }
+}
+
+@media only screen and (max-width: 450px){
+     body{
+        display: grid;
+        grid-template-areas:
+        "cabeca"
+        "corpo"
+        "peh";
+        grid-template-rows: 100px auto 100px;
+        grid-template-columns: auto;
+    }
+    aside{
+        display: none;
+    }
+}
+.img_pedute {
+   height: 200px;
+   width: 200px;
+
+}
+.papi{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 50px;
+   border: WHITE 2px solid;
+   background-color: #F2DCDB;
+   width: 200px;
+   height: 350px;
+   border-radius: 10px;
+   text-align: center;
+   margin: 10px;
+
+}
+button{
+    background-color: #F2AEBC;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ .kitty{
+    text-decoration: none;
+    color: inherit;
+    display: content;
+ }
+      

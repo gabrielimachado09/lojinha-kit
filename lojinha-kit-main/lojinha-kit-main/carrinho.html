@@ -1,0 +1,79 @@
+cqrrinho 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho</title>
+<link rel="stylesheet" href="carrinho.css">
+
+</head>
+<body>
+
+<header>
+<h1>Seu Carrinho</h1>
+</header>
+
+<main class="container">
+
+<div id="lista"></div>
+
+<div class="resumo">
+<h2>Total</h2>
+<p>R$ <span id="total">0.00</span></p>
+</div>
+
+</main>
+
+<script>
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+function render() {
+const lista = document.getElementById("lista");
+const totalEl = document.getElementById("total");
+
+lista.innerHTML = "";
+let total = 0;
+
+carrinho.forEach((item, index) => {
+total += item.preco * item.qtd;
+
+lista.innerHTML += `
+<div class="item">
+<span>${item.nome}</span>
+
+<div class="qtd">
+<button onclick="diminuir(${index})">-</button>
+${item.qtd}
+<button onclick="aumentar(${index})">+</button>
+</div>
+
+<span>R$ ${(item.preco * item.qtd).toFixed(2)}</span>
+</div>
+`;
+});
+
+totalEl.innerText = total.toFixed(2);
+localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+function aumentar(i){
+carrinho[i].qtd++;
+render();
+}
+
+function diminuir(i){
+carrinho[i].qtd--;
+if(carrinho[i].qtd <= 0){
+carrinho.splice(i,1);
+}
+render();
+}
+
+render();
+</script>
+
+
+
+</body>
+</html>
